@@ -27,12 +27,24 @@ function filterByMinAge(arrInput) {
 		age: Number(arrInput[4])
 	};
 
+	if (objPerson1.age < minAge && objPerson2.age < minAge) {
+		return;
+	}
+
+	if (objPerson1.age > minAge && objPerson2.age > minAge) {
+		if (objPerson1.age > objPerson2.age) {
+			return objPerson2;
+		} else {
+			return objPerson1;
+		}
+	}
+
 	if (objPerson1.age >= minAge && objPerson2.age < minAge) {
-		console.log(objPerson1);
 		return objPerson1;
-	} else {
+	} else if (objPerson1.age < minAge && objPerson2.age >= minAge) {
 		return objPerson2;
 	}
 }
 
-filterByMinAge(['12', 'Ivan', '15', 'Asen', '9']);
+var res = filterByMinAge(['19', 'Pesho', '119', 'Gosho', '20']);
+console.log('>>>>>> ', res)
