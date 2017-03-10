@@ -245,4 +245,30 @@ describe('Numbers calculator', function() {
     res = calc.monkeyTrouble(true, false);
     assert.equal(res, false);
   });
+
+  it('should return the sum of two given integers or double their sum if they are the same', function () {
+    var res = calc.sumDouble(1, 2);
+    assert.equal(res, 3);
+
+    res = calc.sumDouble(3, 2);
+    assert.equal(res, 5);
+
+    res = calc.sumDouble(2, 2);
+    assert.equal(res, 8);
+
+    res = calc.sumDouble(-1, 0);
+    assert.equal(res, -1);
+
+    res = calc.sumDouble(3, 3);
+    assert.equal(res, 12);
+
+    res = calc.sumDouble(0, 0);
+    assert.equal(res, 0);
+
+    res = calc.sumDouble(0, 1);
+    assert.equal(res, 1);
+
+    res = calc.sumDouble(3, 4);
+    assert.equal(res, 7);
+  });
 });

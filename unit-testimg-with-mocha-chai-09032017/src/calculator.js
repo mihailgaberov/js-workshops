@@ -41,6 +41,13 @@ function monkeyTrouble(aSmile, bSmile) {
   return aSmile && bSmile || !aSmile && !bSmile;
 }
 
+function sumDouble(a, b) {
+  if (a == b)
+    return (a + b) * 2;
+  else
+    return a + b;
+}
+
 module.exports = {
   add: add,
   substract: substract,
@@ -50,5 +57,6 @@ module.exports = {
   nearHundred: nearHundred,
   posNeg: posNeg,
   sleepIn: sleepIn,
-  monkeyTrouble: monkeyTrouble
+  monkeyTrouble: monkeyTrouble,
+  sumDouble: sumDouble
 };
