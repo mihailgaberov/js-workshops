@@ -37,6 +37,11 @@ function sleepIn(weekday, vacation) {
   return !weekday || vacation;
 }
 
+function monkeyTrouble(aSmile, bSmile) {
+  // return a_smile and b_smile or not a_smile and not b_smile
+  return aSmile && bSmile || !aSmile && !bSmile;
+}
+
 module.exports = {
   add: add,
   substract: substract,
@@ -45,5 +50,6 @@ module.exports = {
   make10: make10,
   nearHundred: nearHundred,
   posNeg: posNeg,
-  sleepIn: sleepIn
+  sleepIn: sleepIn,
+  monkeyTrouble: monkeyTrouble
 };

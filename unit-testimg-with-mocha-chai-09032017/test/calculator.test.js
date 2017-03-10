@@ -230,5 +230,19 @@ describe('Numbers calculator', function() {
 
     res = calc.sleepIn(true, true);
     assert.equal(res, true);
-  })
+  });
+
+  it('should return true if both monkeys are smiling or both are not', function () {
+    var res = calc.monkeyTrouble(true, true);
+    assert.equal(res, true);
+
+    res = calc.monkeyTrouble(false, false);
+    assert.equal(res, true);
+
+    res = calc.monkeyTrouble(false, true);
+    assert.equal(res, false);
+
+    res = calc.monkeyTrouble(true, false);
+    assert.equal(res, false);
+  });
 });
