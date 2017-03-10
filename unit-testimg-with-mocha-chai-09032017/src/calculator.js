@@ -55,6 +55,13 @@ function notString(str) {
     return 'not ' + str;
 }
 
+function missingChar(str, n) {
+  if (n === 0)
+    return str.substr(1, str.length);
+  else
+    return str.substr(0, n) + str.substr(n + 1, str.length);
+}
+
 module.exports = {
   add: add,
   substract: substract,
@@ -66,5 +73,6 @@ module.exports = {
   sleepIn: sleepIn,
   monkeyTrouble: monkeyTrouble,
   sumDouble: sumDouble,
-  notString: notString
+  notString: notString,
+  missingChar: missingChar
 };

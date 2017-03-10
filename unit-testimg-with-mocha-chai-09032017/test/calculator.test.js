@@ -291,4 +291,36 @@ describe('Numbers calculator', function() {
     res = calc.notString('no');
     assert.equal(res, 'not no');
   });
+
+  it('should return a new string where the char at index n has been removed', function () {
+    var res = calc.missingChar('kitten', 1);
+    assert.equal(res, 'ktten');
+
+    res = calc.missingChar('kitten', 0);
+    assert.equal(res, 'itten');
+
+    res = calc.missingChar('kitten', 4);
+    assert.equal(res, 'kittn');
+
+    res = calc.missingChar('Hi', 0);
+    assert.equal(res, 'i');
+
+    res = calc.missingChar('Hi', 1);
+    assert.equal(res, 'H');
+
+    res = calc.missingChar('code', 0);
+    assert.equal(res, 'ode');
+
+    res = calc.missingChar('code', 1);
+    assert.equal(res, 'cde');
+
+    res = calc.missingChar('code', 2);
+    assert.equal(res, 'coe');
+
+    res = calc.missingChar('code', 3);
+    assert.equal(res, 'cod');
+
+    res = calc.missingChar('chocolate', 8);
+    assert.equal(res, 'chocolat');
+  });
 });
