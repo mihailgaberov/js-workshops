@@ -96,4 +96,11 @@ describe('Numbers calculator', function() {
     res = calc.make10(12, -2);
     assert.equal(res, true);
   });
+  
+  it('should return true if a given integer is within 10 of 100 or 200', function () {
+    var res = calc.nearHundred(93);
+    assert.equal(res, true);
+
+    //
+  });
 });
