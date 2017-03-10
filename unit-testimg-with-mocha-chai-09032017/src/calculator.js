@@ -33,6 +33,10 @@ function posNeg(a, b, negative) {
     return ((a < 0 && b >= 0) || (a >= 0 && b < 0));
 }
 
+function sleepIn(weekday, vacation) {
+  return !weekday || vacation;
+}
+
 module.exports = {
   add: add,
   substract: substract,
@@ -40,5 +44,6 @@ module.exports = {
   parrotTrouble: parrotTrouble,
   make10: make10,
   nearHundred: nearHundred,
-  posNeg: posNeg
+  posNeg: posNeg,
+  sleepIn: sleepIn
 };

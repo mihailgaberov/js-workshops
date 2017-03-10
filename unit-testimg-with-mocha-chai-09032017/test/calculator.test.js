@@ -217,4 +217,18 @@ describe('Numbers calculator', function() {
     res = calc.posNeg(-5, -5, true);
     assert.equal(res, true);
   });
+
+  it('should return true if we sleep in - it is not an weekday or we are on vacation', function () {
+    var res = calc.sleepIn(false, false);
+    assert.equal(res, true);
+
+    res = calc.sleepIn(true, false);
+    assert.equal(res, false);
+
+    res = calc.sleepIn(false, true);
+    assert.equal(res, true);
+
+    res = calc.sleepIn(true, true);
+    assert.equal(res, true);
+  })
 });
