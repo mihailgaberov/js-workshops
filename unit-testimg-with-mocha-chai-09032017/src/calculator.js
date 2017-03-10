@@ -71,9 +71,9 @@ function frontBack(str) {
 
 function front3(str) {
   if (str.length <= 3)
-    return str * 3;
+    return str.repeat(3);
   else
-    return str.substr(0, 3) * 3;
+    return str.substr(0, 3).repeat(3);
 }
 
 module.exports = {

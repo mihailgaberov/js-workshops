@@ -349,4 +349,27 @@ describe('Numbers calculator', function() {
     res = calc.frontBack('hello');
     assert.equal(res, 'oellh');
   });
+
+  it('should return a new string which is 3 copies of the front', function () {
+    var res = calc.front3('Java');
+    assert.equal(res, 'JavJavJav');
+
+    res = calc.front3('Chocolate');
+    assert.equal(res, 'ChoChoCho');
+
+    res = calc.front3('abc');
+    assert.equal(res, 'abcabcabc');
+
+    res = calc.front3('abcXYZ');
+    assert.equal(res, 'abcabcabc');
+
+    res = calc.front3('ab');
+    assert.equal(res, 'ababab');
+
+    res = calc.front3('a');
+    assert.equal(res, 'aaa');
+
+    res = calc.front3('');
+    assert.equal(res, '');
+  });
 });
