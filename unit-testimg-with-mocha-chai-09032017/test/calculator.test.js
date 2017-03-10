@@ -67,4 +67,33 @@ describe('Numbers calculator', function() {
     res = calc.parrotTrouble(false, 12);
     assert.equal(res, false);
   });
+  
+  it('should return true if one of two given interegers is equal to 10 or their sum is 10', function () {
+    var res = calc.make10(9, 10);
+    assert.equal(res, true);
+
+    res = calc.make10(9, 9);
+    assert.equal(res, false);
+
+    res = calc.make10(1, 9);
+    assert.equal(res, true);
+
+    res = calc.make10(10, 1);
+    assert.equal(res, true);
+
+    res = calc.make10(10, 10);
+    assert.equal(res, true);
+
+    res = calc.make10(8, 2);
+    assert.equal(res, true);
+
+    res = calc.make10(8, 3);
+    assert.equal(res, false);
+
+    res = calc.make10(10, 42);
+    assert.equal(res, true);
+
+    res = calc.make10(12, -2);
+    assert.equal(res, true);
+  });
 });

@@ -16,12 +16,16 @@ function diff21(n) {
 
 function parrotTrouble(talking, hour) {
   return !!(talking && ((hour < 7 && hour >= 0) || (hour > 20 && hour <= 23)));
+}
 
+function make10(a, b) {
+  return (a === 10 || b === 10) || a + b === 10;
 }
 
 module.exports = {
   add: add,
   substract: substract,
   diff21: diff21,
-  parrotTrouble: parrotTrouble
+  parrotTrouble: parrotTrouble,
+  make10: make10
 };
