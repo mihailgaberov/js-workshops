@@ -158,4 +158,63 @@ describe('Numbers calculator', function() {
     res = calc.nearHundred(290);
     assert.equal(res, false);
   });
+
+  it('should return true when one of the given integers is negative or if "negative" is true and both are negative', function () {
+    var res = calc.posNeg(1, -1, false);
+    assert.equal(res, true);
+
+    res = calc.posNeg(-1, 1, false);
+    assert.equal(res, true);
+
+    res = calc.posNeg(-4, -5, true);
+    assert.equal(res, true);
+
+    res = calc.posNeg(-4, -5, false);
+    assert.equal(res, false);
+
+    res = calc.posNeg(-4, 5, false);
+    assert.equal(res, true);
+
+    res = calc.posNeg(-4, 5, true);
+    assert.equal(res, false);
+
+    res = calc.posNeg(1, 1, false);
+    assert.equal(res, false);
+
+    res = calc.posNeg(-1, -1, false);
+    assert.equal(res, false);
+
+    res = calc.posNeg(1, -1, true);
+    assert.equal(res, false);
+
+    res = calc.posNeg(-1, 1, true);
+    assert.equal(res, false);
+
+    res = calc.posNeg(1, 1, true);
+    assert.equal(res, false);
+
+    res = calc.posNeg(-1, -1, true);
+    assert.equal(res, true);
+
+    res = calc.posNeg(5, -5, false);
+    assert.equal(res, true);
+
+    res = calc.posNeg(-6, 6, false);
+    assert.equal(res, true);
+
+    res = calc.posNeg(-5, -6, false);
+    assert.equal(res, false);
+
+    res = calc.posNeg(-2, -1, false);
+    assert.equal(res, false);
+
+    res = calc.posNeg(1, 2, false);
+    assert.equal(res, false);
+
+    res = calc.posNeg(-5, 6, true);
+    assert.equal(res, false);
+
+    res = calc.posNeg(-5, -5, true);
+    assert.equal(res, true);
+  });
 });

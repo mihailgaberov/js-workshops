@@ -26,11 +26,19 @@ function nearHundred(n) {
   return (n >= 90 && n <= 110) || (n >= 190 && n <= 210);
 }
 
+function posNeg(a, b, negative) {
+  if (negative)
+    return a < 0 && b < 0;
+  else
+    return ((a < 0 && b >= 0) || (a >= 0 && b < 0));
+}
+
 module.exports = {
   add: add,
   substract: substract,
   diff21: diff21,
   parrotTrouble: parrotTrouble,
   make10: make10,
-  nearHundred: nearHundred
+  nearHundred: nearHundred,
+  posNeg: posNeg
 };
