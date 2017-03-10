@@ -62,6 +62,20 @@ function missingChar(str, n) {
     return str.substr(0, n) + str.substr(n + 1, str.length);
 }
 
+function frontBack(str) {
+  if (str.length <= 1)
+    return str;
+  else
+    return str.slice(-1) + str.slice(1, str.length - 1) + str[0];
+}
+
+function front3(str) {
+  if (str.length <= 3)
+    return str * 3;
+  else
+    return str.substr(0, 3) * 3;
+}
+
 module.exports = {
   add: add,
   substract: substract,
@@ -74,5 +88,7 @@ module.exports = {
   monkeyTrouble: monkeyTrouble,
   sumDouble: sumDouble,
   notString: notString,
-  missingChar: missingChar
+  missingChar: missingChar,
+  frontBack: frontBack,
+  front3: front3
 };

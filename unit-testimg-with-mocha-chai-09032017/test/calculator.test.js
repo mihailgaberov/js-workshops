@@ -323,4 +323,30 @@ describe('Numbers calculator', function() {
     res = calc.missingChar('chocolate', 8);
     assert.equal(res, 'chocolat');
   });
+
+  it('should return a new string where the first and last chars have been exchanged.', function () {
+    var res = calc.frontBack('code');
+    assert.equal(res, 'eodc');
+
+    res = calc.frontBack('a');
+    assert.equal(res, 'a');
+
+    res = calc.frontBack('ba');
+    assert.equal(res, 'ab');
+
+    res = calc.frontBack('abc');
+    assert.equal(res, 'cba');
+
+    res = calc.frontBack('');
+    assert.equal(res, '');
+
+    res = calc.frontBack('Chocolate');
+    assert.equal(res, 'ehocolatC');
+
+    res = calc.frontBack('aavJ');
+    assert.equal(res, 'Java');
+
+    res = calc.frontBack('hello');
+    assert.equal(res, 'oellh');
+  });
 });
