@@ -23,7 +23,7 @@ function make10(a, b) {
 }
 
 function nearHundred(n) {
-//   return n >= 90 and n <= 110 or n >= 190 and n <= 210
+  return (n >= 90 && n <= 110) || (n >= 190 && n <= 210);
 }
 
 module.exports = {

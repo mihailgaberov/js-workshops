@@ -101,6 +101,61 @@ describe('Numbers calculator', function() {
     var res = calc.nearHundred(93);
     assert.equal(res, true);
 
-    //
+    res = calc.nearHundred(90);
+    assert.equal(res, true);
+
+    res = calc.nearHundred(89);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(110);
+    assert.equal(res, true);
+
+    res = calc.nearHundred(111);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(121);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(-101);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(-209);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(190);
+    assert.equal(res, true);
+
+    res = calc.nearHundred(209);
+    assert.equal(res, true);
+
+    res = calc.nearHundred(0);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(5);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(5);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(-50);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(191);
+    assert.equal(res, true);
+
+    res = calc.nearHundred(189);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(200);
+    assert.equal(res, true);
+
+    res = calc.nearHundred(210);
+    assert.equal(res, true);
+
+    res = calc.nearHundred(211);
+    assert.equal(res, false);
+
+    res = calc.nearHundred(290);
+    assert.equal(res, false);
   });
 });
