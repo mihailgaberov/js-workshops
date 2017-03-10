@@ -38,7 +38,6 @@ function sleepIn(weekday, vacation) {
 }
 
 function monkeyTrouble(aSmile, bSmile) {
-  // return a_smile and b_smile or not a_smile and not b_smile
   return aSmile && bSmile || !aSmile && !bSmile;
 }
 
