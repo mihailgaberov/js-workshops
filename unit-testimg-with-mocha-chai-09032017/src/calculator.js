@@ -48,6 +48,13 @@ function sumDouble(a, b) {
     return a + b;
 }
 
+function notString(str) {
+  if (str.startsWith('not'))
+    return str;
+  else
+    return 'not ' + str;
+}
+
 module.exports = {
   add: add,
   substract: substract,
@@ -58,5 +65,6 @@ module.exports = {
   posNeg: posNeg,
   sleepIn: sleepIn,
   monkeyTrouble: monkeyTrouble,
-  sumDouble: sumDouble
+  sumDouble: sumDouble,
+  notString: notString
 };

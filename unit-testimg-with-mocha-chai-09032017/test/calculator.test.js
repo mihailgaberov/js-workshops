@@ -271,4 +271,24 @@ describe('Numbers calculator', function() {
     res = calc.sumDouble(3, 4);
     assert.equal(res, 7);
   });
+
+  it('should string with "not" added in front, if is already there return the string itself', function () {
+    var res = calc.notString('candy');
+    assert.equal(res, 'not candy');
+
+    res = calc.notString('x');
+    assert.equal(res, 'not x');
+
+    res = calc.notString('not bad');
+    assert.equal(res, 'not bad');
+
+    res = calc.notString('bad');
+    assert.equal(res, 'not bad');
+
+    res = calc.notString('is not');
+    assert.equal(res, 'not is not');
+
+    res = calc.notString('no');
+    assert.equal(res, 'not no');
+  });
 });
