@@ -86,5 +86,25 @@ describe('Logic checker', function() {
 
     res = check.caughtSpeeding(70, false);
     assert.equal(res, 1);
-  })
+  });
+
+  it('should return sum,  if sum is between 10 and 19, return 20', function () {
+    var res = check.sortaSum(3, 4);
+    assert.equal(res, 7);
+
+    res = check.sortaSum(9, 4);
+    assert.equal(res, 20);
+
+    res = check.sortaSum(10, 11);
+    assert.equal(res, 21);
+
+    res = check.sortaSum(12, -3);
+    assert.equal(res, 9);
+
+    res = check.sortaSum(-3, 12);
+    assert.equal(res, 9);
+
+    res = check.sortaSum(4, 5);
+    assert.equal(res, 9);
+  });
 });

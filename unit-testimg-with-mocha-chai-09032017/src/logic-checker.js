@@ -48,9 +48,19 @@ function caughtSpeeding(speed, isBirthday) {
   return res;
 }
 
+function sortaSum(a, b) {
+  var sum = a + b;
+  if (sum >= 10 && sum <= 19) {
+    return 20;
+  } else {
+    return sum;
+  }
+}
+
 module.exports = {
   cigarParty: cigarParty,
   dateFashion: dateFashion,
   squirrelPlay: squirrelPlay,
-  caughtSpeeding: caughtSpeeding
+  caughtSpeeding: caughtSpeeding,
+  sortaSum: sortaSum
 };
