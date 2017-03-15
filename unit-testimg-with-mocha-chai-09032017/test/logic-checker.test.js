@@ -47,4 +47,24 @@ describe('Logic checker', function() {
     res = check.dateFashion(2, 9);
     assert.equal(res, 0);
   });
+
+  it('should define if the squirrels can play', function () {
+    var res = check.squirrelPlay(70, false);
+    assert.equal(res, true);
+
+    res = check.squirrelPlay(95, false);
+    assert.equal(res, false);
+
+    res = check.squirrelPlay(95, true);
+    assert.equal(res, true);
+
+    res = check.squirrelPlay(90, false);
+    assert.equal(res, true);
+
+    res = check.squirrelPlay(90, true);
+    assert.equal(res, true);
+
+    res = check.squirrelPlay(50, false);
+    assert.equal(res, false);
+  })
 });

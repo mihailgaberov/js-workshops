@@ -20,8 +20,16 @@ function dateFashion(you, yourDate) {
   }
 }
 
+function squirrelPlay(temp, isSummer) {
+  if (isSummer) {
+    return (temp >= 60 && temp <= 100);
+  } else {
+    return (temp >= 60 && temp <= 90);
+  }
+}
 
 module.exports = {
   cigarParty: cigarParty,
-  dateFashion: dateFashion
+  dateFashion: dateFashion,
+  squirrelPlay: squirrelPlay
 };
