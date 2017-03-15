@@ -127,4 +127,24 @@ describe('Logic checker', function() {
     res = check.alarmClock(6, true);
     assert.equal(res, 'off');
   });
+
+  it('should return true if one of the numbers, or their sum, or substract is 6', function () {
+    var res = check.love6(6, 4);
+    assert.equal(res, true);
+
+    res = check.love6(4, 5);
+    assert.equal(res, false);
+
+    res = check.love6(1, 5);
+    assert.equal(res, true);
+
+    res = check.love6(1, 6);
+    assert.equal(res, true);
+
+    res = check.love6(1, 7);
+    assert.equal(res, true);
+
+    res = check.love6(7, 5);
+    assert.equal(res, false);
+  });
 });

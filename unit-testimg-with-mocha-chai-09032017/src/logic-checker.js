@@ -78,11 +78,18 @@ function alarmClock(day, vacation) {
   }
 }
 
+function love6(a, b) {
+  var sum = a + b;
+  var diff = Math.abs(a - b);
+  return (a === 6 || b === 6 || sum === 6 || diff === 6);
+}
+
 module.exports = {
   cigarParty: cigarParty,
   dateFashion: dateFashion,
   squirrelPlay: squirrelPlay,
   caughtSpeeding: caughtSpeeding,
   sortaSum: sortaSum,
-  alarmClock: alarmClock
+  alarmClock: alarmClock,
+  love6: love6
 };
