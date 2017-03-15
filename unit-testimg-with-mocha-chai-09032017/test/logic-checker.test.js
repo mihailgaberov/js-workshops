@@ -66,5 +66,25 @@ describe('Logic checker', function() {
 
     res = check.squirrelPlay(50, false);
     assert.equal(res, false);
+  });
+
+  it('should define if we get a ticket', function () {
+    var res = check.caughtSpeeding(60, false);
+    assert.equal(res, 0);
+
+    res = check.caughtSpeeding(65, false);
+    assert.equal(res, 1);
+
+    res = check.caughtSpeeding(65, true);
+    assert.equal(res, 0);
+
+    res = check.caughtSpeeding(80, false);
+    assert.equal(res, 1);
+
+    res = check.caughtSpeeding(85, false);
+    assert.equal(res, 2);
+
+    res = check.caughtSpeeding(70, false);
+    assert.equal(res, 1);
   })
 });
