@@ -13,7 +13,7 @@ function cigarParty(cigars, isWeekend) {
 function dateFashion(you, yourDate) {
   if ((you >= 8 || yourDate >= 8) && (you > 2 && yourDate > 2)) {
     return 2
-  } else if (you <= 2 || yourDate <=2 ) {
+  } else if (you <= 2 || yourDate <= 2) {
     return 0
   } else {
     return 1
@@ -57,10 +57,32 @@ function sortaSum(a, b) {
   }
 }
 
+function alarmClock(day, vacation) {
+  var sevenOclock = '7:00';
+  var tenOclock = '10:00';
+  var alarmOff = 'off';
+  var isWeekend = (day == 6 || day == 0);
+
+  if (vacation) {
+    if (isWeekend) {
+      return alarmOff;
+    } else {
+      return tenOclock;
+    }
+  } else {
+    if (isWeekend) {
+      return tenOclock;
+    } else {
+      return sevenOclock;
+    }
+  }
+}
+
 module.exports = {
   cigarParty: cigarParty,
   dateFashion: dateFashion,
   squirrelPlay: squirrelPlay,
   caughtSpeeding: caughtSpeeding,
-  sortaSum: sortaSum
+  sortaSum: sortaSum,
+  alarmClock: alarmClock
 };

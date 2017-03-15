@@ -107,4 +107,24 @@ describe('Logic checker', function() {
     res = check.sortaSum(4, 5);
     assert.equal(res, 9);
   });
+
+  it('should return the correct alarm clock value', function () {
+    var res = check.alarmClock(1, false);
+    assert.equal(res, '7:00');
+
+    res = check.alarmClock(5, false);
+    assert.equal(res, '7:00');
+
+    res = check.alarmClock(0, false);
+    assert.equal(res, '10:00');
+
+    res = check.alarmClock(6, false);
+    assert.equal(res, '10:00');
+
+    res = check.alarmClock(0, true);
+    assert.equal(res, 'off');
+
+    res = check.alarmClock(6, true);
+    assert.equal(res, 'off');
+  });
 });
