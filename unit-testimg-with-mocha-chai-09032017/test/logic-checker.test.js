@@ -147,4 +147,24 @@ describe('Logic checker', function() {
     res = check.love6(7, 5);
     assert.equal(res, false);
   });
+
+  it('should return true if a number is in range of 1 to 10, or if in outsideMode - less than or equal to 1 and more than or equal to 10', function () {
+    var res = check.in1to10(5, false);
+    assert.equal(res, true);
+
+    res = check.in1to10(11, false);
+    assert.equal(res, false);
+
+    res = check.in1to10(11, true);
+    assert.equal(res, true);
+
+    res = check.in1to10(10, false);
+    assert.equal(res, true);
+
+    res = check.in1to10(9, false);
+    assert.equal(res, true);
+
+    res = check.in1to10(9, true);
+    assert.equal(res, false);
+  });
 });

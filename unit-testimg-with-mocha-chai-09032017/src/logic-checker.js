@@ -84,6 +84,14 @@ function love6(a, b) {
   return (a === 6 || b === 6 || sum === 6 || diff === 6);
 }
 
+function in1to10(n, outsideMode) {
+  if (outsideMode) {
+    return (n <= 1 || n >= 10);
+  } else {
+   return n >= 1 && n <= 10;
+  }
+}
+
 module.exports = {
   cigarParty: cigarParty,
   dateFashion: dateFashion,
@@ -91,5 +99,6 @@ module.exports = {
   caughtSpeeding: caughtSpeeding,
   sortaSum: sortaSum,
   alarmClock: alarmClock,
-  love6: love6
+  love6: love6,
+  in1to10: in1to10
 };
