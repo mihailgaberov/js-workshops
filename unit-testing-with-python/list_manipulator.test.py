@@ -24,5 +24,9 @@ class TestListMethods(unittest.TestCase):
       self.assertEqual(list_manipulator.rotate_left3([1, 2, 3]), [2, 3, 1])
       self.assertEqual(list_manipulator.rotate_left3([1, 2, 32]), [2, 32, 1])
 
+    def test_reverse3(self):
+      self.assertEqual(list_manipulator.reverse3([1, 2, 3]), [3, 2, 1])
+      self.assertEqual(list_manipulator.reverse3([1, 2, 32]), [32, 2, 1])
+
 if __name__ == '__main__':
     unittest.main()
