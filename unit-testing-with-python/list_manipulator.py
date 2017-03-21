@@ -18,3 +18,9 @@ def reverse3(nums):
 
 def has23(nums):
   return 2 in nums or 3 in nums
+
+def sum2(nums):
+  if len(nums) <= 1:
+    return sum(nums)
+
+  return nums[0] + nums[1]

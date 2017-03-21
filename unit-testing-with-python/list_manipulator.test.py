@@ -34,5 +34,11 @@ class TestListMethods(unittest.TestCase):
       self.assertEqual(list_manipulator.has23([3, 33]), True)
       self.assertEqual(list_manipulator.has23([3, 2]), True)
 
+    def test_sum2(self):
+      self.assertEqual(list_manipulator.sum2([1, 2, 3]), 3)
+      self.assertEqual(list_manipulator.sum2([1, 2]), 3)
+      self.assertEqual(list_manipulator.sum2([1, 1]), 2)
+      self.assertEqual(list_manipulator.sum2([]), 0)
+
 if __name__ == '__main__':
     unittest.main()
