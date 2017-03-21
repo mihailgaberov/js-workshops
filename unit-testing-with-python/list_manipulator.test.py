@@ -12,5 +12,17 @@ class TestListMethods(unittest.TestCase):
       self.assertEqual(list_manipulator.same_first_last([1, 2, 1]), True)
       self.assertEqual(list_manipulator.same_first_last([]), False)
 
+    def test_common_end(self):
+      self.assertEqual(list_manipulator.common_end([1, 2, 3], [1, 33, 33]), True)
+      self.assertEqual(list_manipulator.common_end([1, 2, 3], [2, 33, 33]), False)
+
+    def test_sum3(self):
+      self.assertEqual(list_manipulator.sum3([1, 2, 3]), 6)
+      self.assertEqual(list_manipulator.sum3([1, 2, 32]), 35)
+
+    def test_rotate_left3(self):
+      self.assertEqual(list_manipulator.rotate_left3([1, 2, 3]), [2, 3, 1])
+      self.assertEqual(list_manipulator.rotate_left3([1, 2, 32]), [2, 32, 1])
+
 if __name__ == '__main__':
     unittest.main()
