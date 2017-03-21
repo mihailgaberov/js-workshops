@@ -15,3 +15,6 @@ def rotate_left3(nums):
 
 def reverse3(nums):
   return nums[::-1]
+
+def has23(nums):
+  return 2 in nums or 3 in nums

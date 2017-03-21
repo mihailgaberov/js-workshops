@@ -28,5 +28,10 @@ class TestListMethods(unittest.TestCase):
       self.assertEqual(list_manipulator.reverse3([1, 2, 3]), [3, 2, 1])
       self.assertEqual(list_manipulator.reverse3([1, 2, 32]), [32, 2, 1])
 
+    def test_has23(self):
+      self.assertEqual(list_manipulator.has23([12, 2]), True)
+      self.assertEqual(list_manipulator.has23([12, 23]), False)
+      self.assertEqual(list_manipulator.has23([3, 33]), True)
+
 if __name__ == '__main__':
     unittest.main()
