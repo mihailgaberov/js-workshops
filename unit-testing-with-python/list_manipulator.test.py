@@ -39,6 +39,7 @@ class TestListMethods(unittest.TestCase):
       self.assertEqual(list_manipulator.sum2([1, 2]), 3)
       self.assertEqual(list_manipulator.sum2([1, 1]), 2)
       self.assertEqual(list_manipulator.sum2([]), 0)
+      self.assertEqual(list_manipulator.sum2([1]), 1)
 
 if __name__ == '__main__':
     unittest.main()
